@@ -1,4 +1,20 @@
 # Helm
+**Important helm commands :**
+kubectl get all -all-namespaces
+helm list -A
+helm lint <chart-path>
+helm template <release-name> <chart-path>
+helm install <release-name> <chart-path> --dry-run --debug
+helm install <release-name> <chart-path>
+helm status <release-name>
+helm history <release-name>
+helm get manifest <release-name>
+helm rollback <release-name> <revision> --dry-run
+helm rollback <release-name> <revision> [flags]
+helm get manifest <release-name> --revision <revision-number>
+kubectl get all --selector=release=<release-name> -n <namespace>
+
+
 **Calico:**
 https://docs.tigera.io/calico/latest/getting-started/kubernetes/helm
 helm repo add projectcalico https://docs.projectcalico.org/charts
