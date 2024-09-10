@@ -65,3 +65,28 @@ kubectl get svc -n ingress-nginx
 helm uninstall nginx-ingress --namespace ingress-nginx
 
 ----------------------------------------------------------------------------
+
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/high-availability-1.21+.yaml
+
+---------------------------------------------------
+
+https://kubecost.github.io/cost-analyzer/
+
+helm upgrade --install kubecost \
+  --repo
+https://kubecost.github.io/cost-analyzer/
+cost-analyzer \
+  --namespace kubecost --create-namespace
+---------------------------------------
+
+https://docs.aws.amazon.com/eks/latest/userguide/lbc-helm.html
+
+-------------------------------------
+https://artifacthub.io/packages/helm/k8s-dashboard/kubernetes-dashboard
+
+helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard --create-namespace --namespace kubernetes-dashboard
+
+----------------------
+
+https://docs.tigera.io/calico/latest/getting-started/kubernetes/helm
+
