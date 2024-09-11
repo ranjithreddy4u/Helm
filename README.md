@@ -1,5 +1,3 @@
-# Helm
-
 **Important helm commands :**
 
 kubectl get all -all-namespaces
@@ -84,27 +82,28 @@ helm uninstall nginx-ingress --namespace ingress-nginx
 
 ----------------------------------------------------------------------------
 
-kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/high-availability-1.21+.yaml
+**kubecost:**
 
----------------------------------------------------
+kubectl apply -f https://raw.githubusercontent.com/kubecost/cost-analyzer-helm-chart/develop/kubecost.yaml
 
-https://kubecost.github.io/cost-analyzer/
+----------------------------------------------------------------------------
 
-helm upgrade --install kubecost \
-  --repo
-https://kubecost.github.io/cost-analyzer/
-cost-analyzer \
-  --namespace kubecost --create-namespace
----------------------------------------
+kubectl get pods -A
 
-https://docs.aws.amazon.com/eks/latest/userguide/lbc-helm.html
+kubectl get deploy  -A
 
--------------------------------------
-https://artifacthub.io/packages/helm/k8s-dashboard/kubernetes-dashboard
+kubectl version --short
 
-helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard --create-namespace --namespace kubernetes-dashboard
+kubectl config get-contexts
 
-----------------------
+kubectl config current-context
 
-https://docs.tigera.io/calico/latest/getting-started/kubernetes/helm
+kubectl config use-context --name <cluster arn>
+
+kubectl config use-context <cluster arn>
+
+kubectl config set-context --current --namespace=<Namespace Name>
+
+-----------------
+
 
