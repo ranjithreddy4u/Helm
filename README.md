@@ -28,7 +28,13 @@ helm get manifest <release-name> --revision <revision-number>
 
 kubectl get all --selector=release=<release-name> -n <namespace>
 
+------------------------------------------
 
+**Metric server installation:**
+
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/high-availability-1.21+.yaml
+
+--------------------------------------------------
 **Calico:**
 
 https://docs.tigera.io/calico/latest/getting-started/kubernetes/helm
