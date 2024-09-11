@@ -37,6 +37,14 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/late
 --------------------------------------------------
 **Calico:**
 
+kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.0/manifests/crds.yaml
+
+kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.0/manifests/calico.yaml
+
+kubectl get pods -n calico-system
+
+calicoctl node status
+
 https://docs.tigera.io/calico/latest/getting-started/kubernetes/helm
 
 helm repo add projectcalico https://docs.projectcalico.org/charts
@@ -53,6 +61,10 @@ kubectl get pods -n calico-system
 
 --------------------------------------------------------------------------
 **nginx ingress controller:**
+
+https://kubernetes.github.io/ingress-nginx/deploy/
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.2/deploy/static/provider/cloud/deploy.yaml
 
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 
