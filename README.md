@@ -106,4 +106,4 @@ kubectl config set-context --current --namespace=<Namespace Name>
 
 -----------------
 
-
+https://kubernetes.github.io/ingress-nginx/deploy/
