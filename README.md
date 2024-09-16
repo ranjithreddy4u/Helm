@@ -22,11 +22,9 @@ helm rollback <release-name> <revision> --dry-run
 
 helm rollback <release-name> <revision> [flags]
 
-helm get manifest <release-name> --revision <revision-number>
--n <namespace>
+helm get manifest <release-name> --revision <revision-number> -n <namespace>
 
-kubectl get all --selector=release=<release-name> 
--n <namespace>
+kubectl get all --selector=release=<release-name> -n <namespace>
 
 ------------------------------------------
 
