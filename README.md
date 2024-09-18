@@ -100,6 +100,12 @@ kubectl config current-context
 
 kubectl config use-context --name <cluster arn>
 
+----------------------------------------------------
+
+https://docs.tigera.io/calico/3.27/getting-started/kubernetes/self-managed-onprem/onpremises
+
+-----------------------------------------------------------------------------------------------
+
 kubectl config use-context <cluster arn>
 
 kubectl config set-context --current --namespace=<Namespace Name>
